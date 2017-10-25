@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Gerador\ArquivoTexto.cs" />
+    <Compile Include="Gerador\NumeroAleatorio.cs" />
     <Compile Include="TelaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
