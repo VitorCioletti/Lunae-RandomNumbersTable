@@ -26,19 +26,5 @@
 
             return numeroParticionado;
         }     
-        
-        public static string GerarNovoRNG()
-        {
-            var valoresAleatorios = new byte[sizeof(int)];
-
-            using (RNGCryptoServiceProvider random = new RNGCryptoServiceProvider())
-            {
-                random.GetBytes(valoresAleatorios);
-            }
-
-            var resultado = BitConverter.ToInt32(valoresAleatorios, 0);
-
-            return resultado.ToString();
-        }
     }
 }

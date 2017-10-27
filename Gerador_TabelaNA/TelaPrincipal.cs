@@ -1,6 +1,7 @@
 ﻿namespace Gerador_TabelaNA
 {
     using System;
+    using System.Reflection;
     using System.Threading;
     using System.Windows.Forms;
 
@@ -12,10 +13,12 @@
 
             InitializeComponent();
 
-            PreencherComboBoxPeriodo();           
+            PreencherComboBoxPeriodo();
+            PreencheLabelVersao();
         }
         
-        private static void ResultadoExcessao(object sender, ThreadExceptionEventArgs t) => MessageBox.Show(t.Exception.Message, "Opa :s", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        private static void ResultadoExcessao(object sender, ThreadExceptionEventArgs t) =>
+            MessageBox.Show(t.Exception.Message, "Opa :s", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         
         private void btn_criarTabela_Click(object sender, EventArgs e)
         {
@@ -26,7 +29,7 @@
                 nomeProfessor: txt_professor.Text,
                 nomeTabela: txt_tabela.Text,
                 nomeUniversidade: txt_universidade.Text,
-                periodo: Convert.ToInt16(cmb_periodo.Text),
+                periodo: cmb_periodo.Text,
                 caminhoSalvar: lbl_caminho.Text
             );
 
@@ -54,17 +57,17 @@
                 throw new ArgumentException("Selecione um período antes de prosseguir.");
         }
 
-        private void PreencherComboBoxPeriodo()
-        {
-            var periodos = new int[10] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-
-            cmb_periodo.DataSource = periodos;
-        }
+        private void PreencherComboBoxPeriodo() =>
+            cmb_periodo.DataSource = new int[10] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+        
 
         private void btn_selecionaCaminho_Click(object sender, EventArgs e)
         {
             if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
                 lbl_caminho.Text = folderBrowserDialog1.SelectedPath;
         }
+
+        private void PreencheLabelVersao() =>
+            lbl_versaoSistema.Text = Assembly.GetEntryAssembly().GetName().Version.ToString();
     }
 }

@@ -45,6 +45,7 @@
             this.btn_selecionaCaminho = new System.Windows.Forms.Button();
             this.btn_criarTabela = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
+            this.lbl_versaoSistema = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txt_universidade
@@ -122,7 +123,10 @@
             // 
             // cmb_periodo
             // 
+            this.cmb_periodo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_periodo.FormatString = "0";
             this.cmb_periodo.FormattingEnabled = true;
+            this.cmb_periodo.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.cmb_periodo.Location = new System.Drawing.Point(325, 73);
             this.cmb_periodo.Name = "cmb_periodo";
             this.cmb_periodo.Size = new System.Drawing.Size(48, 21);
@@ -156,7 +160,7 @@
             // 
             // btn_selecionaCaminho
             // 
-            this.btn_selecionaCaminho.BackgroundImage = global::Gerador_TabelaNA.Properties.Resources.document_icon2;
+            this.btn_selecionaCaminho.BackgroundImage = global::Gerador_TabelaNA.Properties.Resources.document_icon;
             this.btn_selecionaCaminho.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_selecionaCaminho.FlatAppearance.BorderSize = 0;
             this.btn_selecionaCaminho.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -197,11 +201,21 @@
             this.label7.TabIndex = 15;
             this.label7.Text = "Criar Tabela";
             // 
+            // lbl_versaoSistema
+            // 
+            this.lbl_versaoSistema.AutoSize = true;
+            this.lbl_versaoSistema.Location = new System.Drawing.Point(335, 9);
+            this.lbl_versaoSistema.Name = "lbl_versaoSistema";
+            this.lbl_versaoSistema.Size = new System.Drawing.Size(39, 13);
+            this.lbl_versaoSistema.TabIndex = 16;
+            this.lbl_versaoSistema.Text = "versao";
+            // 
             // TelaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(396, 264);
+            this.Controls.Add(this.lbl_versaoSistema);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
@@ -245,6 +259,7 @@
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lbl_versaoSistema;
     }
 }
 
