@@ -66,12 +66,15 @@
             var cabecalhoTabela = new StringBuilder();
             cabecalhoTabela.Append("             1");
 
+            int valorCabecalho = 6;
             for (int i = 2; i <= 12; i++)
             {
-                if (i > 10)
-                    cabecalhoTabela.Append($"            {i}");
+                if (valorCabecalho > 10)
+                    cabecalhoTabela.Append($"            {valorCabecalho}");
                 else
-                    cabecalhoTabela.Append($"              {i}");
+                    cabecalhoTabela.Append($"               {valorCabecalho}");
+
+                valorCabecalho += 5;
             }
 
             var fonte = FontFactory.GetFont("Arial", 9, Font.NORMAL);

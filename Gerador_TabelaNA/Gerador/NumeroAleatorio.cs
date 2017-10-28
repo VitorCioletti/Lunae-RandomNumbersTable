@@ -8,10 +8,10 @@
     public static class NumeroAleatorio
     {
         public static StringBuilder GerarNovo() =>
-            ParticionaNumeroAleatorio(BigInteger.genPseudoPrime(200, 45, new Random()).ToString());
+            ParticionaNumeroAleatorio(BigInteger.genPseudoPrime(200, 1, new RNGCryptoServiceProvider()).ToString());
 
         private static StringBuilder ParticionaNumeroAleatorio(string numero)
-        {
+        { 
             int pontoInicialParticao = 0;
             var qtdaParticoes = numero.Length / 5;
             var numeroParticionado = new StringBuilder();
@@ -25,6 +25,6 @@
             }
 
             return numeroParticionado;
-        }     
+        }
     }
 }
