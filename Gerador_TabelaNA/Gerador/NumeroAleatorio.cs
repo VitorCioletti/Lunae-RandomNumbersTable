@@ -1,18 +1,18 @@
 ﻿namespace Gerador_TabelaNA
 {
-    using System;
-    using System.Collections.Generic;
     using System.Security.Cryptography;
     using System.Text;
 
     public static class NumeroAleatorio
     {
         public static StringBuilder GerarNovo() =>
-            ParticionaNumeroAleatorio(BigInteger.genPseudoPrime(200, 1, new RNGCryptoServiceProvider()).ToString());
+            ParticionaNumeroAleatorio(BigInteger.genPseudoPrime(201, 1, new RNGCryptoServiceProvider()).ToString());
 
         private static StringBuilder ParticionaNumeroAleatorio(string numero)
-        { 
-            int pontoInicialParticao = 0;
+        {
+            numero = numero.Substring(1);
+
+            var pontoInicialParticao = 0;
             var qtdaParticoes = numero.Length / 5;
             var numeroParticionado = new StringBuilder();
 

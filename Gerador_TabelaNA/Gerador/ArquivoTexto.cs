@@ -107,7 +107,7 @@
         private static void AdicionaMetaDados()
         {
             documento.AddAuthor(ConfigurationManager.AppSettings["autor"].ToString());
-            documento.AddCreator(ConfigurationManager.AppSettings["versao"].ToString());
+            documento.AddCreator(Assembly.GetEntryAssembly().GetName().Version.ToString());
             documento.AddKeywords(ConfigurationManager.AppSettings["palavrasChave"].ToString());
             documento.AddCreationDate();
             documento.AddTitle(ConfigurationManager.AppSettings["titulo"].ToString());
