@@ -71,7 +71,7 @@
             this.txt_tabela.Name = "txt_tabela";
             this.txt_tabela.Size = new System.Drawing.Size(259, 20);
             this.txt_tabela.TabIndex = 5;
-            this.txt_tabela.Text = "Tabela de Números Aleatórios";
+            this.txt_tabela.Text = "Random Numbers Table";
             // 
             // label1
             // 
@@ -79,9 +79,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.3F);
             this.label1.Location = new System.Drawing.Point(12, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 15);
+            this.label1.Size = new System.Drawing.Size(65, 15);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Universidade : ";
+            this.label1.Text = "University: ";
             // 
             // label2
             // 
@@ -89,9 +89,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.3F);
             this.label2.Location = new System.Drawing.Point(12, 115);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 15);
+            this.label2.Size = new System.Drawing.Size(88, 15);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Nome da tabela: ";
+            this.label2.Text = "Table\'s name: ";
             // 
             // label3
             // 
@@ -99,9 +99,9 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.3F);
             this.label3.Location = new System.Drawing.Point(12, 155);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 15);
+            this.label3.Size = new System.Drawing.Size(55, 15);
             this.label3.TabIndex = 7;
-            this.label3.Text = "Professor:";
+            this.label3.Text = "Teacher:";
             // 
             // txt_curso
             // 
@@ -117,9 +117,9 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.3F);
             this.label4.Location = new System.Drawing.Point(12, 76);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(48, 15);
+            this.label4.Size = new System.Drawing.Size(52, 15);
             this.label4.TabIndex = 9;
-            this.label4.Text = "Curso : ";
+            this.label4.Text = "Course: ";
             // 
             // cmb_periodo
             // 
@@ -145,18 +145,18 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(12, 194);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(219, 13);
+            this.label6.Size = new System.Drawing.Size(145, 13);
             this.label6.TabIndex = 13;
-            this.label6.Text = "Selecione um caminho para salvar o arquivo:";
+            this.label6.Text = "Select a path to save the file:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(322, 59);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(48, 13);
+            this.label5.Size = new System.Drawing.Size(54, 13);
             this.label5.TabIndex = 14;
-            this.label5.Text = "Período:";
+            this.label5.Text = "Semester:";
             // 
             // btn_selecionaCaminho
             // 
@@ -197,18 +197,18 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(322, 235);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(64, 13);
+            this.label7.Size = new System.Drawing.Size(68, 13);
             this.label7.TabIndex = 15;
-            this.label7.Text = "Criar Tabela";
+            this.label7.Text = "Create Table";
             // 
             // lbl_versaoSistema
             // 
             this.lbl_versaoSistema.AutoSize = true;
             this.lbl_versaoSistema.Location = new System.Drawing.Point(335, 9);
             this.lbl_versaoSistema.Name = "lbl_versaoSistema";
-            this.lbl_versaoSistema.Size = new System.Drawing.Size(39, 13);
+            this.lbl_versaoSistema.Size = new System.Drawing.Size(41, 13);
             this.lbl_versaoSistema.TabIndex = 16;
-            this.lbl_versaoSistema.Text = "versao";
+            this.lbl_versaoSistema.Text = "version";
             // 
             // TelaPrincipal
             // 
@@ -235,7 +235,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TelaPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Lunae - Tabela Números Aleatórios";
+            this.Text = "Lunae - Random Number Table";
             this.ResumeLayout(false);
             this.PerformLayout();
 

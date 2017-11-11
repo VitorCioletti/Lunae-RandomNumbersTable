@@ -33,10 +33,10 @@
             tituloUniversidade.Alignment = Element.ALIGN_CENTER;
 
             documento.Add(tituloUniversidade);
-            documento.Add(new Paragraph($"Professor: { nomeProfessor}"));
-            documento.Add(new Paragraph($"Tipo: {nomeTabela}"));
+            documento.Add(new Paragraph($"Teacher: { nomeProfessor}"));
+            documento.Add(new Paragraph($"Type: {nomeTabela}"));
 
-            documento.Add(new Paragraph($"Curso: {nomeCurso} - {periodo}º período"));
+            documento.Add(new Paragraph($"Course: {nomeCurso} - {periodo}º semester"));
             documento.Add(Chunk.NEWLINE);
         }
 
@@ -86,7 +86,7 @@
         private static void MontaRodape(string criador)
         {
             documento.Add(Chunk.NEWLINE);
-            var versaoRodape = new Paragraph($"Feito por: {criador} [Lunae {Assembly.GetEntryAssembly().GetName().Version}]");
+            var versaoRodape = new Paragraph($"Made by: {criador} [Lunae {Assembly.GetEntryAssembly().GetName().Version}]");
             versaoRodape.Alignment = Element.ALIGN_RIGHT;
 
             documento.Add(versaoRodape);
@@ -96,7 +96,7 @@
         {
             documento = new Document(PageSize.A4);
 
-            caminho = Path.Combine(caminho, $"TabelaNA-{DateTime.Now.Millisecond}.pdf");
+            caminho = Path.Combine(caminho, $"table-{DateTime.Now.Millisecond}.pdf");
 
             PdfWriter.GetInstance(
                 document: documento,

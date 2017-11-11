@@ -18,7 +18,7 @@
         }
         
         private static void ResultadoExcessao(object sender, ThreadExceptionEventArgs t) =>
-            MessageBox.Show(t.Exception.Message, "Opa :s", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            MessageBox.Show(t.Exception.Message, "Oops :s", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         
         private void btn_criarTabela_Click(object sender, EventArgs e)
         {
@@ -39,22 +39,19 @@
         private void VerificaCamposVazios()
         {
             if (String.IsNullOrEmpty(txt_curso.Text))
-                throw new ArgumentException("Digite o nome do curso antes de prosseguir.");
+                throw new ArgumentException("Type the course name before proceeding.");
 
             if (String.IsNullOrEmpty(txt_universidade.Text))
-                throw new ArgumentException("Digite o nome da universidade antes de prosseguir.");
+                throw new ArgumentException("Type the university name before proceeding.");
 
             if (String.IsNullOrEmpty(txt_tabela.Text))
-                throw new ArgumentException("Digite o nome da tabela antes de prosseguir.");
+                throw new ArgumentException("Type the table's name before proceeding.");
 
             if (String.IsNullOrEmpty(txt_professor.Text))
-                throw new ArgumentException("Digite o nome do professor antes de prosseguir.");
+                throw new ArgumentException("Type the teacher's name before proceeding.");
 
             if (String.IsNullOrEmpty(lbl_caminho.Text))
-                throw new ArgumentException("Selecione o caminho para salvar o arquivo.");
-
-            if (String.IsNullOrEmpty(cmb_periodo.Text))
-                throw new ArgumentException("Selecione um período antes de prosseguir.");
+                throw new ArgumentException("Select the path to save the file.");
         }
 
         private void PreencherComboBoxPeriodo() =>
