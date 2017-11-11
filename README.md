@@ -17,6 +17,9 @@ Program that creates a random numbers table in .pdf to be used in statistics exe
 
 The UI is simple, just type the university and course name, teacher's name and name of the table. After that, select the path where the new table will be saved and click in `Create table`.
 
-[system image]:/images/image-example.PNG
+![system image](/images/image-example.PNG)
 
 ## 4 - Table Sample
+
+
+![table image](/images/table-example.PNG)
