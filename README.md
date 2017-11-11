@@ -1,9 +1,5 @@
 # Lunae-Random Numbers Table
 
-  * [1 - Introduction](1-introduction)
-  * [2 - Justification](2-justification)
-  * [3 - System](3-system)
-  * [4 -Table Sample](4-table-sample)
 
 ## 1 - Introduction
 
