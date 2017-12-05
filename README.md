@@ -7,7 +7,7 @@ Program that creates a random numbers table in .pdf to be used in statistics exe
 
 ## 2 - Justification
 
- hen a estatician have a sample to select, it is important to be imparcial when selecting it. In order to do that, they use a random numbers table to be fully impartial on who or what they are choosing to participate of the research. Due to this, I designed this system to generate these tables.
+When a estatician have a sample to select, it is important to be imparcial when selecting it. In order to do that, they use a random numbers table to be fully impartial on who or what they are choosing to participate of the research. Due to this, I designed this system to generate these tables.
 
 ## 3 - System
 
