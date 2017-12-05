@@ -7,6 +7,8 @@
 
     public partial class TelaPrincipal : Form
     {
+        private static Loading_Page janelaCarregamento = new Loading_Page();
+
         public TelaPrincipal()
         {
             Application.ThreadException += new ThreadExceptionEventHandler(ResultadoExcessao);
@@ -17,14 +19,20 @@
             PreencheLabelVersao();
         }
         
-        private static void ResultadoExcessao(object sender, ThreadExceptionEventArgs t) =>
-            MessageBox.Show(t.Exception.Message, "Oops :s", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        
-        private void btn_criarTabela_Click(object sender, EventArgs e)
+        private static void ResultadoExcessao(object sender, ThreadExceptionEventArgs t)
+        {
+            janelaCarregamento.Close();
+            MessageBox.Show(t.Exception.Message, "Oops, an error ocurred, that's embarassing :s", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+           
+        private async void btn_criarTabela_Click(object sender, EventArgs e)
         {
             VerificaCamposVazios();
 
-            ArquivoTexto.NovaTabela(
+            janelaCarregamento.Show();
+            this.Hide();
+            
+            await ArquivoTexto.NovaTabela(
                 nomeCurso: txt_curso.Text,
                 nomeProfessor: txt_professor.Text,
                 nomeTabela: txt_tabela.Text,
@@ -32,6 +40,9 @@
                 periodo: cmb_periodo.Text,
                 caminhoSalvar: lbl_caminho.Text
             );
+
+            janelaCarregamento.Hide();
+            this.Show();
 
             MessageBox.Show("Arquivo gerado com sucesso", "Resultado Feliz", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }

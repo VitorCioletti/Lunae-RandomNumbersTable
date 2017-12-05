@@ -7,24 +7,34 @@
     using System.IO;
     using System.Reflection;
     using System.Text;
+    using System.Threading;
+    using System.Threading.Tasks;
 
     public static class ArquivoTexto
     {
         private static Document documento;
 
-        public static void NovaTabela(string nomeUniversidade, string nomeTabela, string nomeProfessor, string nomeCurso, string periodo, string caminhoSalvar)
+        public static Task NovaTabela(string nomeUniversidade, string nomeTabela, string nomeProfessor, string nomeCurso, string periodo, string caminhoSalvar)
         {
-            CriaArquivo(caminhoSalvar);
+            return Task.Run(
+                () =>
+                {
+                    Thread.Sleep(1500);
 
-            documento.Open();
+                    CriaArquivo(caminhoSalvar);
 
-            MontaCabecalho(nomeUniversidade, nomeProfessor, nomeTabela, nomeCurso, periodo);
-            MontaCorpoTabela();
-            MontaRodape("Vitor Cioletti Morais"); 
+                    documento.Open();
 
-            AdicionaMetaDados();
+                    MontaCabecalho(nomeUniversidade, nomeProfessor, nomeTabela, nomeCurso, periodo);
+                    MontaCorpoTabela();
+                    MontaRodape("Vitor Cioletti Morais");
 
-            documento.Close();
+                    AdicionaMetaDados();
+
+                    documento.Close();
+                }
+            );
+  
         }
 
         private static void MontaCabecalho(string nomeUniversidade, string nomeProfessor, string nomeTabela, string nomeCurso, string periodo)
