@@ -44,7 +44,7 @@
             janelaCarregamento.Hide();
             this.Show();
 
-            MessageBox.Show("Arquivo gerado com sucesso", "Resultado Feliz", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            MessageBox.Show("Success! The file now exists :)", "Happy Ending", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
 
         private void VerificaCamposVazios()
