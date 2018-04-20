@@ -99,8 +99,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Gerador\TextFile.cs" />
-    <Compile Include="Gerador\RandomNumber.cs" />
+    <Compile Include="Generator\TextFile.cs" />
+    <Compile Include="Generator\RandomNumber.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
