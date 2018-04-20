@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26403.7
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gerador_TabelaNA", "Gerador_TabelaNA\Gerador_TabelaNA.csproj", "{A0F8B822-EF85-4DD7-BA94-E6E0E491608B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TableGenerator", "Gerador_TabelaNA\TableGenerator.csproj", "{A0F8B822-EF85-4DD7-BA94-E6E0E491608B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

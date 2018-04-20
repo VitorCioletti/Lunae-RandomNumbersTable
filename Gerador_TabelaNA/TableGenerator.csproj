@@ -99,26 +99,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Gerador\ArquivoTexto.cs" />
-    <Compile Include="Gerador\NumeroAleatorio.cs" />
-    <Compile Include="Loading-Page.xaml.cs">
-      <DependentUpon>Loading-Page.xaml</DependentUpon>
-    </Compile>
+    <Compile Include="Gerador\TextFile.cs" />
+    <Compile Include="Gerador\RandomNumber.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="TelaPrincipal.cs">
+    <Compile Include="MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaPrincipal.Designer.cs">
-      <DependentUpon>TelaPrincipal.cs</DependentUpon>
+    <Compile Include="MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="TelaPrincipal.resx">
-      <DependentUpon>TelaPrincipal.cs</DependentUpon>
+    <EmbeddedResource Include="MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -143,6 +140,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Gifs\happystate.gif" />
+    <Content Include="Gifs\loading-table.gif" />
+    <Content Include="Gifs\table-created.gif" />
     <Content Include="Internet firefox.ico" />
     <Content Include="Resources\adicionar-icon.png" />
     <Content Include="Resources\document-icon.png" />
@@ -158,12 +158,6 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Include="Loading-Page.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
