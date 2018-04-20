@@ -1,4 +1,4 @@
-# Lunae-Random Numbers Table
+# Random Numbers Table
 
 
 ## 1 - Introduction
